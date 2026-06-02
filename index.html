@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPETUM | Recon • Protect • Perform</title>
+<style>
+:root{
+    --primary:#63a97a;
+    --dark:#183026;
+    --light:#f4f7f5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#222;
+    background:
+    linear-gradient(rgba(255,255,255,.92),rgba(255,255,255,.92)),
+    repeating-linear-gradient(135deg,#eef4f0 0,#eef4f0 18px,#f7faf8 18px,#f7faf8 36px);
+}
+header{
+    text-align:center;
+    padding:30px 20px;
+}
+.logo{
+    max-width:180px;
+}
+.lang-switch{
+    margin-top:15px;
+}
+button{
+    background:var(--primary);
+    color:white;
+    border:none;
+    padding:10px 16px;
+    margin:0 4px;
+    border-radius:6px;
+    cursor:pointer;
+}
+.hero{
+    padding:60px 20px;
+    text-align:center;
+}
+.hero h1{
+    color:var(--dark);
+    margin-bottom:20px;
+}
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
+}
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+.card{
+    background:white;
+    border-left:5px solid var(--primary);
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+.contact{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+input,textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+.hidden{display:none;}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="1000086531.jpg" class="logo" alt="SPETUM Logo">
+    <div class="lang-switch">
+        <button onclick="setLang('en')">English</button>
+        <button onclick="setLang('cs')">Čeština</button>
+    </div>
+</header>
+
+<div id="en">
+<section class="hero">
+<h1>Advanced Geospatial Intelligence & UAV Solutions</h1>
+<p>Professional geoinformation services, mapping, orthophotometry and fixed-wing UAV development.</p>
+</section>
+
+<section class="section">
+<div class="cards">
+<div class="card">
+<h2>Geospatial Services</h2>
+<p>Cartography, orthophoto processing, geospatial data integration and support for precise local positioning reference points.</p>
+</div>
+
+<div class="card">
+<h2>Sensor Optimization</h2>
+<p>Analysis and optimization of radar systems, acoustic sensors, infrared sensors, DVB receivers and 4G/5G data collection networks.</p>
+</div>
+
+<div class="card">
+<h2>Fixed-Wing UAV Development</h2>
+<p>Engineering of reconnaissance and logistics UAV platforms designed for long-range operation and mission flexibility.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="contact">
+<h2>Contact Us</h2>
+<form>
+<input type="text" placeholder="Name">
+<input type="email" placeholder="Email">
+<textarea rows="5" placeholder="Message"></textarea>
+<button type="submit">Send</button>
+</form>
+</div>
+</section>
+</div>
+
+<div id="cs" class="hidden">
+<section class="hero">
+<h1>Pokročilá geoinformační a UAV řešení</h1>
+<p>Profesionální geoinformační služby, kartografie, ortofotometrie a vývoj bezpilotních letadel s pevným křídlem.</p>
+</section>
+
+<section class="section">
+<div class="cards">
+<div class="card">
+<h2>Geoinformační služby</h2>
+<p>Kartografie, zpracování ortofotomap, integrace geodat a podpora přesného určování referenčních bodů.</p>
+</div>
+
+<div class="card">
+<h2>Optimalizace senzorů</h2>
+<p>Analýza a optimalizace radarových systémů, akustických a infračervených senzorů, DVB přijímačů a sítí 4G/5G.</p>
+</div>
+
+<div class="card">
+<h2>Vývoj UAV</h2>
+<p>Konstrukce průzkumných a logistických bezpilotních letadel s pevným křídlem pro dlouhý dolet a vysokou efektivitu.</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="contact">
+<h2>Kontaktujte nás</h2>
+<form>
+<input type="text" placeholder="Jméno">
+<input type="email" placeholder="E-mail">
+<textarea rows="5" placeholder="Zpráva"></textarea>
+<button type="submit">Odeslat</button>
+</form>
+</div>
+</section>
+</div>
+
+<footer>
+SPETUM © 2026 | Recon • Protect • Perform
+</footer>
+
+<script>
+function setLang(lang){
+    document.getElementById('en').classList.add('hidden');
+    document.getElementById('cs').classList.add('hidden');
+    document.getElementById(lang).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
